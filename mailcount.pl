@@ -23,9 +23,9 @@ sub main {
 		}
 	}
 
-    #Print out hash array
+    #Print out hash arra,csv compatible
 	foreach my $key (keys %times) {
-		print "$key occured $times{$key} times\n";
+		print "$key,$times{$key} times\n";
 	}
 }
 sub rounddown($) {
