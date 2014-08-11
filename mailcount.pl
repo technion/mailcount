@@ -33,7 +33,7 @@ sub rounddown($) {
 	my $date = shift or die "Missing input";
     chomp($date); #Date contains \r\n
 	die "Invalid input $date" unless $date =~ /"(.*)(\d{2}):\d{2} (A|P)M/;
-	my $minutes = sprintf("%02d", int($2 / 5));
+	my $minutes = sprintf("%02d", (int($2 / 5))*5);
 	return "$1$minutes:00 $3M";
 }
 
