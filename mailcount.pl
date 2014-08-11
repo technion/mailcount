@@ -16,7 +16,7 @@ sub main {
 		my @row = split(/,/, $line);
 		my $fixed = &rounddown($row[3]);
         if(!defined($times{$fixed})) {
-			$times{$fixed} = 0;
+			$times{$fixed} = 1;
 		}
 		else {
 			$times{$fixed}++;
